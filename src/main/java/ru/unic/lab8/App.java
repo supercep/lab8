@@ -11,7 +11,7 @@ public class App
 
         if ((null==args) || (args.length<2))
         {
-            System.out.println("Error \n\n Please enter correct formule like \n\njava -jar calc.jar 2 + 2 \n\n or \n\njava -jar calc.jar 2 - 2\n\n or \n\njava -jar calc.jar 2 x 2\n\n or \n\njava -jar calc.jar 2 / 2\n\n");
+            System.out.println("Error \n\nPlease enter correct formule like \n\njava -jar calc.jar 2 + 2 \n\n or \n\njava -jar calc.jar 2 - 2\n\n or \n\njava -jar calc.jar 2 x 2\n\n or \n\njava -jar calc.jar 2 / 2\n\n");
         }
         else{
 
