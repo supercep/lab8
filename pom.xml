@@ -8,7 +8,7 @@
   <name>lab8</name>
   <url>http://maven.apache.org</url>
   <build>
-    <finalName>calc</finalName>
+    <finalName>lab8</finalName>
     <plugins>
       <plugin>
         <!-- Build an executable JAR -->

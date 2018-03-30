@@ -1,28 +1,38 @@
 package ru.unic.lab8;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+
 
 /**
  * Hello world!
  *
  */
-public class App extends Application
-{
-    public static void main(String[] args) throws Exception {
-        launch(args);
+public class App extends Application {
+
+
+    public static void main(String[] args) {
+        Application.launch(App.class, (java.lang.String[])null);
     }
 
     @Override
-    public void start(Stage stage) throws Exception {
-        String fxmlFile = "/fxml/hello.fxml";
-        FXMLLoader loader = new FXMLLoader();
-        Parent root = (Parent) loader.load(getClass().getResourceAsStream(fxmlFile));
-        stage.setTitle("JavaFX and Maven");
-        stage.setScene(new Scene(root));
-        stage.show();
+    public void start(Stage primaryStage) {
+        try {
+            AnchorPane root = (AnchorPane) FXMLLoader.load(App.class.getResource("/fxml/hello.fxml"));
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.setTitle("Lab8");
+            primaryStage.setResizable(false);
+            primaryStage.show();
+        } catch (Exception ex) {
+            Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
+
 }
